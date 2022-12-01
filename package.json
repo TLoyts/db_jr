@@ -1,0 +1,37 @@
+{
+  "name": "db_jr",
+  "version": "1.1.0",
+  "description": "API Ngọc Rồng \"Dragon Ball Super\" node.js",
+  "main": "index.js",
+  "scripts": {
+    "dev": "nodemon index.js",
+    "start": "node index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/TLoyts/db_jr.git"
+  },
+  "keywords": [
+    "nodejs",
+    "API"
+  ],
+  "author": "=",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/TLoyts/db_jrissues"
+  },
+  "homepage": "https://github.com/TLoyts/db_jr#readme",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^16.0.1",
+    "express": "^4.18.1",
+    "pg": "^8.7.3"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.19",
+    "standard": "^17.0.0"
+  },
+  "eslintConfig": {
+    "extends": "./node_modules/standard/eslintrc.json"
+  }
+}

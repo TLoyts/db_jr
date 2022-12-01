@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="../../favicon.ico">
+    <link rel="stylesheet" href="../../style.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.28.0/themes/prism-tomorrow.min.css" rel="stylesheet" />
+    <title>Tài Liệu</title>
+</head>
+<body>
+    <main class="main_docs">
+        
+        <header class="header header_doc">
+            <div class="nav_logo">
+                <a href="/">
+                    <img src="https://i.ibb.co/tZSjPCZ/pngwing-com-1.png" alt="Logo de la pagina"/>
+                    <h3>DBS API</h3>
+                </a>
+            </div>
+            <nav class="nav">
+                <ul class="nav-ul">
+                    <a href="/en" class="nav_links">
+                        <i class='bx bxs-home'></i>
+                        TRANG CHỦ
+                    </a>
+                    <a href="/es/doc" class="active_link nav_links">
+                        <i class='bx bxl-dev-to'></i>
+                        TÀI LIỆU
+                    </a>
+                </ul>
+            </nav>
+            <div>
+                <a href="#" class="nav_links">TIẾNG ANH</a>
+            </div>
+        </header>
+
+        <section class="container">
+            <div class="navbar">
+                <ul>
+                    <li class="title_list">Giới thiệu</li>
+                    <a href="#rest"><li class="item_list">• NGHỈ NGƠI</li></a>
+                    <a href="#info"><li class="item_list">• Thông tin</li></a>
+
+                    <li class="title_list">Nhân Vật</li>
+                    <a href="#character_schema"><li class="item_list">• Sơ lược nhân vật</li></a>
+                    <a href="#allcharacter"><li class="item_list">• Lấy tất cả nhân vật</li></a>
+                    <a href="#idcharacter"><li class="item_list">• Lấy một nhân vật</li></a>
+                </ul>
+            </div>
+
+            <div class="container_doc">
+                <div id="rest" class="mini_container rest">
+                    <h1 class="title_list">REST</h1>
+                    <h3 class="url_text">Base url: </h3><a class="url_link type_url" href="https://dragon-ball-super-api.herokuapp.com/api">https://dragon-ball-super-api.herokuapp.com/api</a>
+                    <p>Url chứa thông tin về các tài nguyên có sẵn của API. Tất cả các yêu cầu sẽ trở lại <span class="type">json</span> data.</p>
+
+                    <pre>
+<span class="token string">GET </span>https://dragon-ball-super-api.herokuapp.com/api
+                        <code class="language-json">
+{
+    "characters": "https://dragon-ball-super-api.herokuapp.com/api/characters"
+}
+                        </code>
+                    </pre>
+
+                    <p>Tài nguyên có sẵn:</p>
+                    <ul>
+                        <li><a class="url_link" href="#personajes">Characters</a>: get all characters.</li>
+                    </ul>
+                </div>
+
+                <div id="info" class="mini_container info">
+                    <h1 class="title_list">Thông Tin</h1>
+                    <p>Tài liệu này sẽ giúp bạn làm quen với các tài nguyên API Dragon Ball bằng cách hiển thị cho bạn các truy vấn daa khác nhau.</p>
+                </div>
+
+                <div id="character_schema" class="mini_container character_schema">
+                    <h1 class="title_list">Sơ lược nhân vật</h1>
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Key</th>
+                                <th>Type</th>
+                                <th>Description</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>id</td>
+                                <td>int</td>
+                                <td>Id của nhân vật</td>
+                            </tr>
+                            <tr>
+                                <td>imageUrl</td>
+                                <td>string (url)</td>
+                                <td>Một hình ảnh (.png) của nhân vật</td>
+                            </tr>
+                            <tr>
+                                <td>name</td>
+                                <td>string</td>
+                                <td>Tên nhân vật</td>
+                            </tr>
+                            <tr>
+                                <td>originplanet</td>
+                                <td>string</td>
+                                <td>Hành tinh gốc của nhân vật</td>
+                            </tr>
+                            <tr>
+                                <td>role</td>
+                                <td>string</td>
+                                <td>Vai trò hoặc chức năng quan trọng nhất của nhân vật</td>
+                            </tr>
+                            <tr>
+                                <td>specie</td>
+                                <td>string</td>
+                                <td>Hành tinh của nhân vật</td>
+                            </tr>
+                            <tr>
+                                <td>status</td>
+                                <td>string</td>
+                                <td>Trạng thái của nhân vật</td>
+                            </tr>
+                            <tr>
+                                <td>transform</td>
+                                <td>array</td>
+                                <td>Biến đổi nhân vật (nếu có)</td>
+                            </tr>
+                            <tr>
+                                <td>universe</td>
+                                <td>string</td>
+                                <td>Vũ trụ mà nhân vật thuộc về</td>
+                            </tr>
+                            
+                        </tbody>
+                    </table>
+                </div>
+
+                <div id="allcharacter" class="mini_container allcharacter">
+                    <h1 class="title_list">Lấy tất cả nhân vật</h1>
+                    <h3 class="url_text">Endpoint: </h3><a class="url_link type_url" href="https://dragon-ball-super-api.herokuapp.com/api/characters">https://dragon-ball-super-api.herokuapp.com/api/characters</a>
+                    <p>You can access the list of all characters using the endpoint <span class="type">/characters</span>.</p>
+
+                    <pre>
+<span class="token string">GET </span>https://dragon-ball-super-api.herokuapp.com/api<span class="endpoint">/characters</span>
+                        <code class="language-json">
+[
+    {
+        "id": 124,
+        "name": "Daishinkan",
+        "specie": "Angel",
+        "role": "Sumo Sacerdote",
+        "imageUrl": "https://i.ibb.co/cY94Ddp/Daishinkan.png",
+        "status": "Vivo",
+        "universe": "0",
+        "transform": [],
+        "originplanet": "Desconocido"
+    },
+    ...
+]
+                        </code>
+                    </pre>
+
+                    <h1 class="title_list">Phân trang đơn giản</h1>
+                    <h3 class="url_text">Endpoint: </h3><a class="url_link type_url" href="https://dragon-ball-super-api.herokuapp.com/api/characters?limit=50">https://dragon-ball-super-api.herokuapp.com/api/characters?limit={max-characters}</a>
+                    <p>Bạn có thể truy cập một phân trang nhất định bằng tham số <span class="type">limit</span> <span class="type">/characters?limit={max-characters}</span>. This will return an array with the characters separated based on the parameter <span class="type">limit</span></p>
+
+                    <pre>
+<span class="token string">GET </span>https://dragon-ball-super-api.herokuapp.com/api/characters<span class="endpoint">/characters?limit=50</span>
+                        <code class="language-json">
+[
+    0: {...}
+    1: {...}
+    2: {...}
+]
+                        </code>
+// Array of 50 characters each position.
+                    </pre>
+
+                    <h1 class="title_list">Offset y (giới hạn)</h1>
+                    <h3 class="url_text">Endpoint: </h3><a class="url_link type_url" href="https://dragon-ball-super-api.herokuapp.com/api/characters?offset=0?limit=50">https://dragon-ball-super-api.herokuapp.com/api/characters?offset={x}?limit={y}</a>
+                    <p>Bạn có thể truy cập vào một phân trang nhất định bằng cách sử dụng các tham số truy vấn <span class="type">offset</span> y <span class="type">limit</span> <span class="type">/characters?offset={x}?limit={y}</span>.</p>
+
+                    <pre>
+<span class="token string">GET </span>https://dragon-ball-super-api.herokuapp.com/api/characters<span class="endpoint">/characters?offset=0?limit=50</span>
+                        <code class="language-json">
+[
+    0: {...}
+    1: {...}
+    2: {...}
+]
+                        </code>
+                    </pre>
+                </div>
+
+                <div id="idcharacter" class="mini_container idcharacter">
+                    <h1 class="title_list">Tìm kiếm tên nhân vật</h1>
+                    <h3 class="url_text">Endpoint: </h3><a class="url_link type_url" href="https://dragon-ball-super-api.herokuapp.com/api/characters/Gohan">https://dragon-ball-super-api.herokuapp.com/api/characters/{name}</a>
+                    <p>Bạn có thể lấy một ký tự bằng cách sử dụng tên <span class="type">/characters/{name}</span>.</p>
+
+                    <pre>
+<span class="token string">GET </span>https://dragon-ball-super-api.herokuapp.com/api<span class="endpoint">/characters/Gohan</span>
+                        <code class="language-json">
+{
+    "id": x,
+    "imageUrl": "https://i.ibb.co/XjmRwZp/Dragon-Ball-Gohan-PNG-Pic.png",
+    "name": "Gohan",
+    "originplanet": "Planeta Tierra",
+    "role": "Guerrero Z",
+    "specie": "Saiyan Mestizo",
+    "status": "Vivo",
+    "transform": [],
+    "universe": "7"
+}
+                        </code>
+                    </pre>
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.28.0/prism.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.28.0/plugins/autoloader/prism-autoloader.min.js"></script>
+</body>
+</html>
