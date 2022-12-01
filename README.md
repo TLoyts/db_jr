@@ -16,7 +16,7 @@
 
 
 <!-- ABOUT THE PROJECT -->
-## Sobre el proyecto
+## Về dự án
 
 ![](https://i.ibb.co/vVGTdcg/screenshot-2.png)
 
@@ -35,7 +35,7 @@ Trang web được tạo ra như một giải pháp cho thách thức do Alkemy 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
 
-### Instalacion
+## Cài Đặt
 
 Bạn có thể sử dụng dự án và thoải mái thay đổi bất cứ điều gì bạn muốn.
 
